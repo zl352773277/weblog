@@ -1,0 +1,69 @@
+{% extends "blog/blog_base.html" %}
+{% load comments %}
+
+{% block title %} blog list {% endblock %}
+
+{% block article %}
+<article class='content-main'>
+    {% for blog in blogs %}
+        <h3><a href="/">{{ blog.caption }}</a></h3>
+        <p class="muted">
+            <i class="icon-user"></i><small> {{ blog.author }}</small>
+            <i class="icon-time"></i><small> {{ blog.publish_time|date:"m-d Y H:m:s" }}</small>
+            <i class="icon-briefcase"></i>  <small>{{ blog.category }}</small>
+        </p>
+      
+        <div>{{ blog.content}} </div>
+        <h5><a href="../{{blog.id}}"> 阅读全文 >></a></h5>
+
+        <div class="row-fluid">
+            <div class="span3">
+                <p class="muted">
+                    {% for tag in blog.tags.all %}
+                        <i class="icon-tag"></i>  <small>{{ tag }}</small>
+                    {% endfor %}
+                </p>
+            </div>
+            <div class="span2 offset7">
+            
+                <a href="/#cmt" title="comment"><i class=" icon-comment"></i>{{ comment_count }}</a>
+            </div>
+        </div>
+        <hr>
+    {% endfor %}
+</article>
+    {% include "blog/page.html" %}
+{% endblock %}
+
+{% block aside %}
+    <div class="aside">
+        <div class="pinned">
+            <img src="/static/img/logo.jpg" alt="..." class="img-circle">
+            <h1></h1>
+            <blockquote>
+                <p>怕什么 <strong>真理</strong>无穷，</p>
+                <p>进<strong>一步</strong>有一步的<strong>欢喜</strong>。</p>
+                <small>胡适</small>
+            </blockquote>
+            <blockquote>
+                <img src="/static/img/category.png" alt="..."> <strong style=" font-size: 20px;">分类</strong></span>
+                <table class="table table-hover table-condensed">
+                 <tbody>
+                    {% for category in categories %}
+                        <tr class="active"></tr>
+                        <td><a href="/"><strong style="color:#009ACD;">{{ category }}</strong></a></td>
+                    {% endfor %}
+                 </tbody>
+                </table>
+            </blockquote>
+            {% block tags %}
+                <blockquote>
+                    <img src="/static/img/tags.png" alt="..."> <strong style=" font-size: 20px;">标签</strong></span><br>
+                    {% for tag in tags %}
+                        <a href="/" class="btn btn-small btn-info">{{ tag }}</a>
+                    {% endfor %}
+                </blockquote>
+            {% endblock %}
+        </div>
+    </div>
+{% endblock %}

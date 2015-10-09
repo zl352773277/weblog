@@ -1,0 +1,375 @@
+/*header*/
+.nav .new-wrapper {
+    position: relative;
+    float: left;
+}
+
+i {
+    display: inline-block;
+    zoom: 1;
+    vertical-align: text-top;
+    background-image: url(../img/twitter_web_sprite_icons.png);
+    background-position: 0 0;
+    background-repeat: no-repeat;
+}
+.nav i {
+    float: left;
+    margin: -1px 6px 0 0;
+}
+
+.nav-home, .nav-topics, .nav-people, .nav-me, .nav-tweet {
+    height: 22px;
+}
+
+.nav .active .nav-new{
+    display: block;
+}
+.nav-new {
+    background-position: -200px -80px;
+    width: 24px;
+    height: 3px;
+}
+.nav-home {
+    background-position: 0 -50px;
+    width: 21px;
+}
+a:hover .nav-home {
+    background-position: 0 -80px;
+}
+.active .nav-home,
+.active a:hover .nav-home {
+    background-position: 0 -110px;
+}
+.nav-people {
+    background-position: -80px -50px;
+    width: 21px;
+}
+a:hover .nav-people {
+    background-position: -80px -80px;
+}
+.active .nav-people,
+.active a:hover .nav-people {
+    background-position: -80px -110px;
+}
+.nav-me {
+    background-position: -120px -50px;
+    width: 21px;
+}
+a:hover .nav-me {
+    background-position: -120px -80px;
+}
+.active .nav-me,
+.active a:hover .nav-me {
+    background-position: -120px -110px;
+}
+.nav .nav-new {
+    position: absolute;
+    top: 26px;
+    left: 50%;
+    display: none;
+    height: 3px;
+    margin-left: -14px;
+    line-height: 1;
+    text-align: center;
+}
+
+.sbrand{
+    position: absolute;
+    top: 0;
+    font-size: 20px;
+    padding-top:10px;
+    left: 45%;
+    color: #000;
+    font-weight: bold;
+}
+
+.nav-session {
+    background-position: -160px -50px;
+    width: 20px;
+    height: 21px;
+}
+.nav-tweet {
+background-position: -200px -50px;
+width: 22px;
+height: 18px;
+}
+
+#myModal{
+    display: none;
+}
+
+hr.soften {
+    clear: both;
+    float: none;
+    width: 100%;
+    height: 1px;
+    line-height: 1px;
+    font-size: 0;
+    border: none 0;
+    margin: 5px 0;
+    border: none;
+    background: #ddd;
+    background-image: -webkit-gradient(linear,left bottom,right bottom,color-stop(0, rgb(255,255,255)), color-stop(0.1, rgb(221,221,221)),color-stop(0.9, rgb(221,221,221)),color-stop(1, rgb(255,255,255)));
+    background-image: -webkit-linear-gradient(left center,rgb(255,255,255) 0%,rgb(221,221,221) 10%,rgb(221,221,221) 90%,rgb(255,255,255) 100%);
+    background-image: -moz-linear-gradient(left center,rgb(255,255,255) 0%,rgb(221,221,221) 10%,rgb(221,221,221) 90%,rgb(255,255,255) 100%);
+    background-image: -o-linear-gradient(left center,rgb(255,255,255) 0%,rgb(221,221,221) 10%,rgb(221,221,221) 90%,rgb(255,255,255) 100%);
+}
+
+#cmt p{
+    margin: 2px 0;
+}
+
+.none-padding{
+    padding-left: 0;
+}
+
+.gravatar{
+    width: 40px;
+    height: 40px
+}
+
+h1, h2, h3, h4, h5, h6{
+    margin: 5px 0;
+}
+#cmt h2{
+    font-size: 16px;
+    line-height: 20px;
+}
+.comtop{
+    margin-top: 20px;
+}
+.post-info{
+    padding: 0;
+}
+.blog-content{
+    margin: 20px 0;
+}
+form fieldset label {
+    width: 100px;
+    margin: 4px 0 5px 0;
+    font-weight: bold;
+}
+.alert-error{
+    width: 65%;
+}
+
+form textarea{
+    display: block;
+    width: 95%;
+    height: 400px;
+    padding: 5px;
+    font-size: 14px;
+    resize: vertical;
+}
+
+/*add blog form*/
+.field label{
+    display: block;
+    margin: 0 0 5px 0;
+    font-weight: bold;
+}
+.field input{
+    width: 70%;
+}
+/* end add blog*/
+
+.btn-tweet {
+    padding: 3px 4px 5px 10px;
+}
+
+textarea.twitter{
+    width: 512px;
+    height: 64px;
+    overflow: hidden;
+    padding-bottom: 5px;
+    resize: vertical;
+}
+
+.twitter-modal-header{
+    border: none;
+}
+.twitter-modal-header h3{
+    font-size: 18px;
+    line-height: 24px;
+    font-weight: bold;
+}
+.twitter-modal-body{
+    padding: 0 15px;
+}
+
+.twitter-modal-footer{
+    border: none;
+    padding-top: 10px;
+}
+
+textarea.comment{
+    height: 160px;
+    width: 70%;
+}
+
+.panel {
+  padding: 15px;
+  margin-bottom: 20px;
+  background-color: #ffffff;
+  border: 1px solid #dddddd;
+  border-radius: 4px;
+  -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
+}
+
+.panel-heading {
+  padding: 10px 15px;
+  margin: -15px -15px 15px;
+  font-size: 17px;
+  font-weight: 500;
+  background-color: #f5f5f5;
+  border-bottom: 1px solid #dddddd;
+  border-top-right-radius: 3px;
+  border-top-left-radius: 3px;
+}
+
+.panel-footer {
+  padding: 10px 15px;
+  margin: 15px -15px -15px;
+  background-color: #f5f5f5;
+  border-top: 1px solid #dddddd;
+  border-bottom-right-radius: 3px;
+  border-bottom-left-radius: 3px;
+}
+
+.panel-primary {
+  border-color: #428bca;
+}
+
+.panel-primary .panel-heading {
+  color: #ffffff;
+  background-color: #428bca;
+  border-color: #428bca;
+}
+
+.panel-success {
+  border-color: #d6e9c6;
+}
+
+.panel-success .panel-heading {
+  color: #468847;
+  background-color: #dff0d8;
+  border-color: #d6e9c6;
+}
+
+.panel-warning {
+  border-color: #fbeed5;
+}
+
+.panel-warning .panel-heading {
+  color: #c09853;
+  background-color: #fcf8e3;
+  border-color: #fbeed5;
+}
+
+.panel-danger {
+  border-color: #eed3d7;
+}
+
+.panel-danger .panel-heading {
+  color: #b94a48;
+  background-color: #f2dede;
+  border-color: #eed3d7;
+}
+
+.panel-info {
+  border-color: #bce8f1;
+}
+
+.panel-info .panel-heading {
+  color: #3a87ad;
+  background-color: #d9edf7;
+  border-color: #bce8f1;
+}
+
+html,body {
+    height: 100%;
+    /* The html and body elements cannot have any padding or margin. */
+}
+
+/* Wrapper for page content to push down footer */
+#wrap {
+    min-height: 100%;
+    height: auto;
+    /* Negative indent footer by its height */
+    margin: 0 auto -60px;
+    /* Pad bottom by footer height */
+    padding: 0 0 60px;
+    #margin-left: 100px; /* 左边距 */
+}
+
+/* Custom page CSS
+-------------------------------------------------- */
+/* Not required for template or sticky footer method. */
+.container {
+    #max-width: 680px;
+    height: auto;
+    padding: 0 15px;
+    #background-color: #FFAEB9;
+}
+
+.container .credit {
+    margin: 20px 0;
+    text-align:center;
+}
+
+body{
+    background-image:url("/static/img/tbg2.png"); /*background_picture*/
+}
+
+#footer {
+    height: 60px;
+    background-color:#212121;
+}
+
+ #form_top{
+    display:block;
+    bottom:5px;
+    left:25px;
+    position:fixed;
+    #color: #ECD672;
+}
+.top_img {
+    background-image: url("/static/img/topicon.png");
+    width: 50px;
+    height:50px;
+    cursor: pointer;
+}
+.top_img:hover {
+    background-image: url("/static/img/topiconblack.png");
+}
+
+.aside {
+    width: auto;
+    height: auto;
+    min-height: 100%;
+    height: 700px;
+    position: relative;
+}
+.pinned{
+    margin-top: 30px;
+    position: absolute;
+}
+
+.pinned .btn{
+    margin-top: 8px;
+    margin-right: 5px;
+    position: relative;
+}
+
+.img-circle {
+    position: relative;
+    width: 110px;
+    height:110px;
+    left: 17%;
+    margin-bottom: 30px;
+    border: 10;
+    border-color: #262626;
+    border-style: outset;
+    border-width: 5px;
+}
